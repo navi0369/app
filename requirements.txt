@@ -1,4 +1,4 @@
-pandas2.2.2
+pandas==2.2.2
 matplotlib==3.9.2
 plotly==5.23.0
 dash==2.17.1
