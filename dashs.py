@@ -4,7 +4,6 @@ import plotly.graph_objs as go
 import plotly.io as pio
 from dash import dcc, html, dash_table
 import dash
-from jupyter_dash import JupyterDash
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 
@@ -301,27 +300,9 @@ def update_tdc_figure(tdc1952, tdc1985, tdc2005, tdc_all):
     return fig1
 
 if __name__=='__main__':
-    app.run_server(port=4050)
-    
-# Suponiendo que 'fig' es tu figura de Plotly
-pio.write_html(fig, 'grafica_multiple.html')
-pio.write_html(fig1, 'grafica_tasas.html')
+    app.run_server(port=1000)
 
-# Crear archivo HTML que incorpora los gráficos
-html_content = '''
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Aplicación Dash</title>
-</head>
-<body>
-    <h1>Gráfica Múltiple</h1>
-    <iframe src="grafica_multiple.html" width="100%" height="600"></iframe>
-    <h1>Gráfica de Tasas</h1>
-    <iframe src="grafica_tasas.html" width="100%" height="600"></iframe>
-</body>
-</html>
-'''
+
 
 with open('index.html', 'w') as f:
     f.write(html_content)
