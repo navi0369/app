@@ -40,6 +40,7 @@ df['Tdc importaciones(%)']= df['Importaciones'].pct_change() * 100
 df['Tdc balanza comercial(%)']= df['Balanza comercial'].pct_change() * -100
 df.loc[1970:1984,:]
 app=dash.Dash()
+server=app.server
 
 # Crear una figura con múltiples trazas
 fig = go.Figure()
