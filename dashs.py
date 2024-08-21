@@ -299,5 +299,6 @@ def update_tdc_figure(tdc1952, tdc1985, tdc2005, tdc_all):
 
     return fig1
 
-if __name__=='__main__':
-    app.run_server()
+if __name__ == "__main__":
+    app.run_server(debug=False, port=int(os.environ.get('PORT', 8080)))
+
