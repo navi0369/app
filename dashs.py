@@ -301,8 +301,3 @@ def update_tdc_figure(tdc1952, tdc1985, tdc2005, tdc_all):
 
 if __name__=='__main__':
     app.run_server(port=10000)
-
-
-
-with open('index.html', 'w') as f:
-    f.write(html_content)
