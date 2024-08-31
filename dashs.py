@@ -70,7 +70,7 @@ fig.add_trace(go.Scatter(
 
 # Configurar el diseño de la figura
 fig.update_layout(
-    title='Gráfica con Múltiples Trazas',
+    title='Exportaciones Importaciones y Balanza comercial (En millones de bolivianos de 1990)',
     xaxis_title='X-axis',
     yaxis_title='Y-axis',
     barmode='group'  # Para mostrar barras agrupadas
@@ -112,7 +112,7 @@ app.layout = html.Div(
     style={'backgroundColor': '#f9f9f9', 'padding': '20px'},
     children=[
         html.H1(
-            'Hola Dash',
+            'Trabajo',
             style={'textAlign': 'center', 'color': '#2c3e50', 'font-family': 'Arial, sans-serif'}
         ),
         html.Div(
@@ -181,7 +181,7 @@ app.layout = html.Div(
             figure=fig1,
             style={'backgroundColor': '#ffffff', 'border': '1px solid #ddd', 'padding': '10px'}
         ),
-        html.P('Resumen de estadígrafos clave para el período 1952-2019'),
+        html.P('Resumen de estadígrafos clave para el período 1952-2019 (En millones de bolivianos de 1990)'),
         # Div con tablas descriptivas utilizando Dash DataTable
         # Div con tablas descriptivas utilizando Dash DataTable
         html.Div(
@@ -253,7 +253,7 @@ def update_figure(btn1952, btn1985, btn2005, btn_all):
     fig.add_trace(go.Scatter(x=df.index, y=exportaciones, mode='lines+markers', name='Exportaciones'))
     fig.add_trace(go.Scatter(x=df.index, y=importaciones, mode='lines+markers', name='Importaciones'))
     fig.add_trace(go.Scatter(x=df.index, y=df['Balanza comercial'], mode='lines+markers', name='Balanza comercial'))
-    fig.update_layout(title='Gráfica con Múltiples Trazas', xaxis_title='Año', yaxis_title='Valor')
+    fig.update_layout(title='Exportaciones Importaciones y Balanza comercial (En millones de bolivianos de 1990)', xaxis_title='Año', yaxis_title='Valor')
 
     if button_id == 'btn-1952-1985':
         fig.update_xaxes(range=[1951.5, 1985])
